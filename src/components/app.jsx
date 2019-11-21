@@ -18,7 +18,8 @@ class App extends React.Component {
         }
 
         // binding
-        this.handleKeyPress = this.handleKeyPress.bind(this);    
+        this.handleKeyPress = this.handleKeyPress.bind(this);  
+        this.drumTrigger = this.drumTrigger.bind(this);  
     }
 
     // event listener for key press
@@ -82,10 +83,44 @@ class App extends React.Component {
         });
     }
 
-    drumTrigger = () => {
+    drumTrigger(e) {
         // pass audio clip to be played into function and trigger
+        let arrIndex = 10;
+        switch (e.target.value) {
+            case "Q":
+                arrIndex = 1;
+                break;
+            case "W":
+                arrIndex = 2;
+                break;
+            case "E":
+                arrIndex = 3;
+                break;
+            case "A":
+                arrIndex = 4;
+                break;
+            case "S":
+                arrIndex = 5;
+                break;
+            case "D":
+                arrIndex = 6;
+                break;
+            case "Z":
+                arrIndex = 7;
+                break;
+            case "X":
+                arrIndex = 8;
+                break;
+            case "C":
+                arrIndex = 9;
+                break;
+            default:
+                break;
+        }
+        this.setState ({
+            sampleObject: arrIndex
+        });
     }
-
 
     render() {
         return (
