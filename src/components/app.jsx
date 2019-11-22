@@ -14,12 +14,14 @@ class App extends React.Component {
         
         this.state = {
             sampleBank: bankA,
-            sampleObject: 10 // initial placeholder "--"
+            sampleObject: 10, // initial placeholder "--"
+            volumeControl: 0.8
         }
 
         // binding
         this.handleKeyPress = this.handleKeyPress.bind(this);  
         this.drumTrigger = this.drumTrigger.bind(this);  
+        this.volumeChange = this.volumeChange.bind(this);
     }
 
     // event listener for key press
@@ -50,46 +52,55 @@ class App extends React.Component {
             case 81:
                 arrIndex = 1;
                 document.getElementById(this.state.sampleBank[0] + "-Q").currentTime = 0; // sets back to zero for quick repeat
+                document.getElementById(this.state.sampleBank[0] + "-Q").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-Q").play();
                 break;
             case 87:
                 arrIndex = 2;
                 document.getElementById(this.state.sampleBank[0] + "-W").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-W").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-W").play();
                 break;
             case 69:
                 arrIndex = 3;
                 document.getElementById(this.state.sampleBank[0] + "-E").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-E").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-E").play();
                 break;
             case 65:
                 arrIndex = 4;
                 document.getElementById(this.state.sampleBank[0] + "-A").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-A").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-A").play();
                 break;
             case 83:
                 arrIndex = 5;
                 document.getElementById(this.state.sampleBank[0] + "-S").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-S").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-S").play();
                 break;
             case 68:
                 arrIndex = 6;
                 document.getElementById(this.state.sampleBank[0] + "-D").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-D").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-D").play();
                 break;
             case 90:
                 arrIndex = 7;
                 document.getElementById(this.state.sampleBank[0] + "-Z").currentTime = 0
+                document.getElementById(this.state.sampleBank[0] + "-Z").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-Z").play();
                 break;
             case 88:
                 arrIndex = 8;
                 document.getElementById(this.state.sampleBank[0] + "-X").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-X").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-X").play();
                 break;
             case 67:
                 arrIndex = 9;
                 document.getElementById(this.state.sampleBank[0] + "-C").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-C").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-C").play();
                 break;
             default:
@@ -107,46 +118,55 @@ class App extends React.Component {
             case "Q":
                 arrIndex = 1;
                 document.getElementById(this.state.sampleBank[0] + "-Q").currentTime = 0; // sets back to zero for quick repeat
+                document.getElementById(this.state.sampleBank[0] + "-Q").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-Q").play();
                 break;
             case "W":
                 arrIndex = 2;
                 document.getElementById(this.state.sampleBank[0] + "-W").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-W").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-W").play();
                 break;
             case "E":
                 arrIndex = 3;
                 document.getElementById(this.state.sampleBank[0] + "-E").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-E").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-E").play();
                 break;
             case "A":
                 arrIndex = 4;
                 document.getElementById(this.state.sampleBank[0] + "-A").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-A").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-A").play();
                 break;
             case "S":
                 arrIndex = 5;
                 document.getElementById(this.state.sampleBank[0] + "-S").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-S").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-S").play();
                 break;
             case "D":
                 arrIndex = 6;
                 document.getElementById(this.state.sampleBank[0] + "-D").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-D").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-D").play();
                 break;
             case "Z":
                 arrIndex = 7;
                 document.getElementById(this.state.sampleBank[0] + "-Z").currentTime = 0
+                document.getElementById(this.state.sampleBank[0] + "-Z").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-Z").play();
                 break;
             case "X":
                 arrIndex = 8;
                 document.getElementById(this.state.sampleBank[0] + "-X").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-X").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-X").play();
                 break;
             case "C":
                 arrIndex = 9;
                 document.getElementById(this.state.sampleBank[0] + "-C").currentTime = 0;
+                document.getElementById(this.state.sampleBank[0] + "-C").volume = this.state.volumeControl;
                 document.getElementById(this.state.sampleBank[0] + "-C").play();
                 break;
             default:
@@ -154,6 +174,13 @@ class App extends React.Component {
         }
         this.setState ({
             sampleObject: arrIndex
+        });
+    }
+
+    volumeChange(e) {
+        let usableVolume = e.target.value / 100;
+        this.setState({
+            volumeControl: usableVolume
         });
     }
 
@@ -174,6 +201,10 @@ class App extends React.Component {
                     <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="Z">Z<audio id="bank-A-Z" src={bankA[7].url} type="audio/mpeg"></audio><audio id="bank-B-Z" src={bankB[7].url} type="audio/mpeg"></audio></button>
                     <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="X">X<audio id="bank-A-X" src={bankA[8].url} type="audio/mpeg"></audio><audio id="bank-B-X" src={bankB[8].url} type="audio/mpeg"></audio></button>
                     <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="C">C<audio id="bank-A-C" src={bankA[9].url} type="audio/mpeg"></audio><audio id="bank-B-C" src={bankB[9].url} type="audio/mpeg"></audio></button>
+                </div>
+                <div id="volumeSlider">
+                    <input type="range" min="0" max="100" value={Math.round(this.state.volumeControl * 100)} onChange={this.volumeChange} id="volume-control"></input>
+                    <div id="volume-display">{Math.round(this.state.volumeControl * 100)}</div>
                 </div>
                 <div id="bankSelect">
                     {/* Switches sample bank and displays bank */}
