@@ -1,5 +1,6 @@
 const bankA = [
-    "bank A",
+    // First array entry shows name of bank
+    "bank-A",
     {
         keyCode: 81,
         keyTrigger: 'Q',
@@ -52,7 +53,8 @@ const bankA = [
 ];
 
 const bankB = [
-    "bank B",
+    // First array entry shows name of bank
+    "bank-B",
     {
         keyCode: 81,
         keyTrigger: 'Q',
