@@ -1,0 +1,82 @@
+#drum-machine {
+    width: 70vw;
+    height: 70vh;    
+    background-color: #888888;
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    border: 0.2vh solid #252525;
+    border-radius: 1vh;
+    box-shadow: 0.4vw 0.4vh 0.4vw #696969bb, -0.4vw -0.4vh 0.4vw #696969bb;
+}
+
+@media(max-width: 550px) {
+    #drum-machine {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+}
+
+#title {
+    float: right;
+    margin: 1vh 2vw;
+}
+
+#title a {
+    text-decoration: none;
+    color: white;
+}
+
+#display {
+    width: 60vw;
+    background-color: #143783;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 3vh 0;
+    margin: 5vh auto 1vh;
+    border: 3px double white;
+}
+
+#controls {
+    height: 60vh;
+    margin: 3vh 5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#pads {
+    border: 1px solid red;
+    width: 50vw;
+    max-height: 53vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#master {
+    border: 1px solid blue;
+    width: 20vw;
+}
+
+.drum-pad {
+    /*max-width: 10vw;
+    height: 10vh;
+    margin: 1vh 1vw;*/
+    width: 10vw;
+    height: 10vh;
+    margin: 1vh 1vw;
+    background-color: #e2e2e2;
+    outline: none;
+    border: 0.2vh solid black;
+    border-radius: 1vh;
+    box-shadow: 0.2vw 0.2vh 0.2vw #696969bb, -0.2vw -0.2vh 0.2vw #696969bb;
+}
+
+/* light up buttons */
+.drum-pad:active, .active {
+    background-color: #dbbe17;
+    box-shadow: none;
+}

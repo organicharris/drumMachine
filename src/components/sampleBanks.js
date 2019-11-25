@@ -10,7 +10,7 @@ const bankA = [
     {sampleID: "Kick & Hat", url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'}, 
     {sampleID: 'Kick', url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'}, 
     {sampleID: 'Closed HH', url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'}, 
-    {sampleID: "--"} // last entry acts as placeholder
+    {sampleID: "---"} // last entry acts as placeholder
 ];
 
 const bankB = [
@@ -25,7 +25,7 @@ const bankB = [
     {sampleID: 'Kick', url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'}, 
     {sampleID: 'Rim Shot', url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'}, 
     {sampleID: 'Snare', url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'}, 
-    {sampleID: "--"} // last entry acts as placeholder
+    {sampleID: "---"} // last entry acts as placeholder
 ];
 
 module.exports.bankA = bankA;
