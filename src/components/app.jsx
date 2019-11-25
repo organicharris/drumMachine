@@ -20,7 +20,7 @@ class App extends React.Component {
 
         // binding
         this.handleKeyPress = this.handleKeyPress.bind(this);  
-        this.drumTrigger = this.drumTrigger.bind(this);  
+        this.padTrigger = this.padTrigger.bind(this);  
         this.volumeChange = this.volumeChange.bind(this);
     }
 
@@ -29,7 +29,7 @@ class App extends React.Component {
         document.addEventListener("keydown", this.handleKeyPress)
     }
     componentWillUnmount() {
-        document.removeEventListener("keydown", this.handleKeyPress)
+        document.removeEventListener("keydown", this.handleKeyPress);
     }
 
     // selects sample bank
@@ -45,135 +45,31 @@ class App extends React.Component {
         };
     }
 
-    // Selects object number based on keyCode
-    handleKeyPress(e) {
-        let arrIndex = 10;
-        switch (e.keyCode) {
-            case 81:
-                arrIndex = 1;
-                document.getElementById(this.state.sampleBank[0] + "-Q").currentTime = 0; // sets back to zero for quick repeat
-                document.getElementById(this.state.sampleBank[0] + "-Q").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-Q").play();
-                break;
-            case 87:
-                arrIndex = 2;
-                document.getElementById(this.state.sampleBank[0] + "-W").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-W").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-W").play();
-                break;
-            case 69:
-                arrIndex = 3;
-                document.getElementById(this.state.sampleBank[0] + "-E").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-E").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-E").play();
-                break;
-            case 65:
-                arrIndex = 4;
-                document.getElementById(this.state.sampleBank[0] + "-A").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-A").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-A").play();
-                break;
-            case 83:
-                arrIndex = 5;
-                document.getElementById(this.state.sampleBank[0] + "-S").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-S").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-S").play();
-                break;
-            case 68:
-                arrIndex = 6;
-                document.getElementById(this.state.sampleBank[0] + "-D").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-D").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-D").play();
-                break;
-            case 90:
-                arrIndex = 7;
-                document.getElementById(this.state.sampleBank[0] + "-Z").currentTime = 0
-                document.getElementById(this.state.sampleBank[0] + "-Z").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-Z").play();
-                break;
-            case 88:
-                arrIndex = 8;
-                document.getElementById(this.state.sampleBank[0] + "-X").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-X").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-X").play();
-                break;
-            case 67:
-                arrIndex = 9;
-                document.getElementById(this.state.sampleBank[0] + "-C").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-C").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-C").play();
-                break;
-            default:
-                break;
+    // sample play function
+    samplePlayer(key) {
+        const keyArr = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]; // avoids null errors
+        if (keyArr.includes(key)) {
+            document.getElementById(this.state.sampleBank[0] + "-" + key).currentTime = 0; // sets back to zero for quick repeat
+            document.getElementById(this.state.sampleBank[0] + "-" + key).volume = this.state.volumeControl;
+            document.getElementById(this.state.sampleBank[0] + "-" + key).play();
         }
-        this.setState ({
-            sampleObject: arrIndex
-        });
     }
 
-    drumTrigger(e) {
-        // pass audio clip to be played into function and trigger
-        let arrIndex = 10;
-        switch (e.target.value) {
-            case "Q":
-                arrIndex = 1;
-                document.getElementById(this.state.sampleBank[0] + "-Q").currentTime = 0; // sets back to zero for quick repeat
-                document.getElementById(this.state.sampleBank[0] + "-Q").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-Q").play();
-                break;
-            case "W":
-                arrIndex = 2;
-                document.getElementById(this.state.sampleBank[0] + "-W").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-W").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-W").play();
-                break;
-            case "E":
-                arrIndex = 3;
-                document.getElementById(this.state.sampleBank[0] + "-E").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-E").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-E").play();
-                break;
-            case "A":
-                arrIndex = 4;
-                document.getElementById(this.state.sampleBank[0] + "-A").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-A").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-A").play();
-                break;
-            case "S":
-                arrIndex = 5;
-                document.getElementById(this.state.sampleBank[0] + "-S").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-S").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-S").play();
-                break;
-            case "D":
-                arrIndex = 6;
-                document.getElementById(this.state.sampleBank[0] + "-D").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-D").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-D").play();
-                break;
-            case "Z":
-                arrIndex = 7;
-                document.getElementById(this.state.sampleBank[0] + "-Z").currentTime = 0
-                document.getElementById(this.state.sampleBank[0] + "-Z").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-Z").play();
-                break;
-            case "X":
-                arrIndex = 8;
-                document.getElementById(this.state.sampleBank[0] + "-X").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-X").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-X").play();
-                break;
-            case "C":
-                arrIndex = 9;
-                document.getElementById(this.state.sampleBank[0] + "-C").currentTime = 0;
-                document.getElementById(this.state.sampleBank[0] + "-C").volume = this.state.volumeControl;
-                document.getElementById(this.state.sampleBank[0] + "-C").play();
-                break;
-            default:
-                break;
-        }
+    // Selects object number based on keyCode
+    handleKeyPress(e) {
+        const keyArr = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
+        this.samplePlayer(String.fromCharCode(e.keyCode));
         this.setState ({
-            sampleObject: arrIndex
+            sampleObject: (keyArr.indexOf(String.fromCharCode(e.keyCode)) + 1)
+        });
+    } 
+
+    padTrigger(e) {
+        // pass audio clip to be played into function and trigger
+        const keyArr = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
+        this.samplePlayer(e.target.value);
+        this.setState({
+            sampleObject: (keyArr.indexOf(e.target.value) + 1)
         });
     }
 
@@ -188,19 +84,19 @@ class App extends React.Component {
         return (
             <div id="drum-machine">
                 <div id="display">
-                    {this.state.sampleBank[this.state.sampleObject].sampleID}                    
+                    {this.state.sampleBank[this.state.sampleObject].sampleID}
                 </div>
                 <div id="pads">
                     {/* Two audio links are included on each object as both have to be loaded initially */}
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="Q">Q<audio id="bank-A-Q" src={bankA[1].url} type="audio/mpeg"></audio><audio id="bank-B-Q" src={bankB[1].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="W">W<audio id="bank-A-W" src={bankA[2].url} type="audio/mpeg"></audio><audio id="bank-B-W" src={bankB[2].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="E">E<audio id="bank-A-E" src={bankA[3].url} type="audio/mpeg"></audio><audio id="bank-B-E" src={bankB[3].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="A">A<audio id="bank-A-A" src={bankA[4].url} type="audio/mpeg"></audio><audio id="bank-B-A" src={bankB[4].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="S">S<audio id="bank-A-S" src={bankA[5].url} type="audio/mpeg"></audio><audio id="bank-B-S" src={bankB[5].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="D">D<audio id="bank-A-D" src={bankA[6].url} type="audio/mpeg"></audio><audio id="bank-B-D" src={bankB[6].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="Z">Z<audio id="bank-A-Z" src={bankA[7].url} type="audio/mpeg"></audio><audio id="bank-B-Z" src={bankB[7].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="X">X<audio id="bank-A-X" src={bankA[8].url} type="audio/mpeg"></audio><audio id="bank-B-X" src={bankB[8].url} type="audio/mpeg"></audio></button>
-                    <button className="drum-pad" id="" type="button" onClick={this.drumTrigger} value="C">C<audio id="bank-A-C" src={bankA[9].url} type="audio/mpeg"></audio><audio id="bank-B-C" src={bankB[9].url} type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padQ" type="button" onClick={this.padTrigger} value="Q">Q<audio src={bankA[1].url} id="bank-A-Q" type="audio/mpeg"></audio><audio src={bankB[1].url} id="bank-B-Q" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padW" type="button" onClick={this.padTrigger} value="W">W<audio src={bankA[2].url} id="bank-A-W" type="audio/mpeg"></audio><audio src={bankB[2].url} id="bank-B-W" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padE" type="button" onClick={this.padTrigger} value="E">E<audio src={bankA[3].url} id="bank-A-E" type="audio/mpeg"></audio><audio src={bankB[3].url} id="bank-B-E" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padA" type="button" onClick={this.padTrigger} value="A">A<audio src={bankA[4].url} id="bank-A-A" type="audio/mpeg"></audio><audio src={bankB[4].url} id="bank-B-A" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padS" type="button" onClick={this.padTrigger} value="S">S<audio src={bankA[5].url} id="bank-A-S" type="audio/mpeg"></audio><audio src={bankB[5].url} id="bank-B-S" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padD" type="button" onClick={this.padTrigger} value="D">D<audio src={bankA[6].url} id="bank-A-D" type="audio/mpeg"></audio><audio src={bankB[6].url} id="bank-B-D" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padZ" type="button" onClick={this.padTrigger} value="Z">Z<audio src={bankA[7].url} id="bank-A-Z" type="audio/mpeg"></audio><audio src={bankB[7].url} id="bank-B-Z" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padX" type="button" onClick={this.padTrigger} value="X">X<audio src={bankA[8].url} id="bank-A-X" type="audio/mpeg"></audio><audio src={bankB[8].url} id="bank-B-X" type="audio/mpeg"></audio></button>
+                    <button className="drum-pad" id="padC" type="button" onClick={this.padTrigger} value="C">C<audio src={bankA[9].url} id="bank-A-C" type="audio/mpeg"></audio><audio src={bankB[9].url} id="bank-B-C" type="audio/mpeg"></audio></button>
                 </div>
                 <div id="volumeSlider">
                     <input type="range" min="0" max="100" value={Math.round(this.state.volumeControl * 100)} onChange={this.volumeChange} id="volume-control"></input>
