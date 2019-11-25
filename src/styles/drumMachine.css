@@ -31,33 +31,37 @@
 
 #display {
     width: 60vw;
-    background-color: #143783;
+    background-color: #06276e;
     color: white;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     padding: 3vh 0;
     margin: 5vh auto 1vh;
     border: 3px double white;
+    border-radius: 0.8vh;
 }
 
 #controls {
-    height: 60vh;
+    height: 50vh;
     margin: 3vh 5vw;
     display: flex;
     flex-direction: row;
 }
 
 #pads {
-    border: 1px solid red;
+    background-color: #690b0b;
+    border-radius: 1vh;
     width: 50vw;
     max-height: 53vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 1vw 0 0;
 }
 
 #master {
-    border: 1px solid blue;
+    background-color: #d3d3bd;
+    border-radius: 1vh;
     width: 20vw;
 }
 
@@ -72,11 +76,17 @@
     outline: none;
     border: 0.2vh solid black;
     border-radius: 1vh;
-    box-shadow: 0.2vw 0.2vh 0.2vw #696969bb, -0.2vw -0.2vh 0.2vw #696969bb;
+    box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
 }
 
 /* light up buttons */
 .drum-pad:active, .active {
     background-color: #dbbe17;
     box-shadow: none;
+}
+
+.letter {
+    font-weight: 800;
+    font-size: 1.5em;
+    padding-bottom: 0.5vh;
 }

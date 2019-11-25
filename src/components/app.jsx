@@ -206,15 +206,60 @@ class App extends React.Component {
                     <div id="controls">
                         <div id="pads">
                             {/* Two audio links are included on each object as both have to be loaded initially */}
-                            <button className={this.state.buttonQ} id="padQ" type="button" onClick={this.padTrigger} value="Q">Q<audio src={bankA[1].url} id="bank-A-Q" type="audio/mpeg"></audio><audio src={bankB[1].url} id="bank-B-Q" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonW} id="padW" type="button" onClick={this.padTrigger} value="W">W<audio src={bankA[2].url} id="bank-A-W" type="audio/mpeg"></audio><audio src={bankB[2].url} id="bank-B-W" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonE} id="padE" type="button" onClick={this.padTrigger} value="E">E<audio src={bankA[3].url} id="bank-A-E" type="audio/mpeg"></audio><audio src={bankB[3].url} id="bank-B-E" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonA} id="padA" type="button" onClick={this.padTrigger} value="A">A<audio src={bankA[4].url} id="bank-A-A" type="audio/mpeg"></audio><audio src={bankB[4].url} id="bank-B-A" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonS} id="padS" type="button" onClick={this.padTrigger} value="S">S<audio src={bankA[5].url} id="bank-A-S" type="audio/mpeg"></audio><audio src={bankB[5].url} id="bank-B-S" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonD} id="padD" type="button" onClick={this.padTrigger} value="D">D<audio src={bankA[6].url} id="bank-A-D" type="audio/mpeg"></audio><audio src={bankB[6].url} id="bank-B-D" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonZ} id="padZ" type="button" onClick={this.padTrigger} value="Z">Z<audio src={bankA[7].url} id="bank-A-Z" type="audio/mpeg"></audio><audio src={bankB[7].url} id="bank-B-Z" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonX} id="padX" type="button" onClick={this.padTrigger} value="X">X<audio src={bankA[8].url} id="bank-A-X" type="audio/mpeg"></audio><audio src={bankB[8].url} id="bank-B-X" type="audio/mpeg"></audio></button>
-                            <button className={this.state.buttonC} id="padC" type="button" onClick={this.padTrigger} value="C">C<audio src={bankA[9].url} id="bank-A-C" type="audio/mpeg"></audio><audio src={bankB[9].url} id="bank-B-C" type="audio/mpeg"></audio></button>
+                            <button className={this.state.buttonQ} id="padQ" type="button" onClick={this.padTrigger} value="Q">
+                                <div className="letter">Q</div>
+                                {this.state.sampleBank[1].sampleID}
+                                <audio src={bankA[1].url} id="bank-A-Q" type="audio/mpeg"></audio>
+                                <audio src={bankB[1].url} id="bank-B-Q" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonW} id="padW" type="button" onClick={this.padTrigger} value="W">
+                                <div className="letter">W</div>
+                                {this.state.sampleBank[2].sampleID}
+                                <audio src={bankA[2].url} id="bank-A-W" type="audio/mpeg"></audio>
+                                <audio src={bankB[2].url} id="bank-B-W" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonE} id="padE" type="button" onClick={this.padTrigger} value="E">
+                                <div className="letter">E</div>
+                                {this.state.sampleBank[3].sampleID}
+                                <audio src={bankA[3].url} id="bank-A-E" type="audio/mpeg"></audio>
+                                <audio src={bankB[3].url} id="bank-B-E" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonA} id="padA" type="button" onClick={this.padTrigger} value="A">
+                                <div className="letter">A</div>
+                                {this.state.sampleBank[4].sampleID} 
+                                <audio src={bankA[4].url} id="bank-A-A" type="audio/mpeg"></audio>
+                                <audio src={bankB[4].url} id="bank-B-A" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonS} id="padS" type="button" onClick={this.padTrigger} value="S">
+                                <div className="letter">S</div>
+                                {this.state.sampleBank[5].sampleID}
+                                <audio src={bankA[5].url} id="bank-A-S" type="audio/mpeg"></audio>
+                                <audio src={bankB[5].url} id="bank-B-S" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonD} id="padD" type="button" onClick={this.padTrigger} value="D">
+                                <div className="letter">D</div>
+                                {this.state.sampleBank[6].sampleID}
+                                <audio src={bankA[6].url} id="bank-A-D" type="audio/mpeg"></audio>
+                                <audio src={bankB[6].url} id="bank-B-D" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonZ} id="padZ" type="button" onClick={this.padTrigger} value="Z">
+                                <div className="letter">Z</div>
+                                {this.state.sampleBank[7].sampleID}
+                                <audio src={bankA[7].url} id="bank-A-Z" type="audio/mpeg"></audio>
+                                <audio src={bankB[7].url} id="bank-B-Z" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonX} id="padX" type="button" onClick={this.padTrigger} value="X">
+                                <div className="letter">X</div>
+                                {this.state.sampleBank[8].sampleID}
+                                <audio src={bankA[8].url} id="bank-A-X" type="audio/mpeg"></audio>
+                                <audio src={bankB[8].url} id="bank-B-X" type="audio/mpeg"></audio>
+                            </button>
+                            <button className={this.state.buttonC} id="padC" type="button" onClick={this.padTrigger} value="C">
+                                <div className="letter">C</div>
+                                {this.state.sampleBank[9].sampleID}
+                                <audio src={bankA[9].url} id="bank-A-C" type="audio/mpeg"></audio>
+                                <audio src={bankB[9].url} id="bank-B-C" type="audio/mpeg"></audio>
+                            </button>
                         </div>
                         <div id="master">
                             <div id="volumeSlider">
