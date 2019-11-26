@@ -31,8 +31,8 @@
 
 #display {
     width: 60vw;
-    background-color: #06276e;
-    color: white;
+    background-color: #000000;
+    color: #0a8f2b  ;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     padding: 3vh 0;
@@ -56,6 +56,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     margin: 0 1vw 0 0;
 }
 
