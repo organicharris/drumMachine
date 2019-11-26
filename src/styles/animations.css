@@ -3,13 +3,13 @@
         color: #5a6163;
     }
     100% {
-        color: #1e7e9b;
+        color: #d44742;
     }
 }
 
 @keyframes linkNotOver {
     0% {
-        color: #1e7e9b;
+        color: #d44742;
     }
     100% {
         color: #5a6163;

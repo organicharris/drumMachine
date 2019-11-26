@@ -10,15 +10,6 @@
     box-shadow: 0.4vw 0.4vh 0.4vw #696969bb, -0.4vw -0.4vh 0.4vw #696969bb;
 }
 
-@media(max-width: 550px) {
-    #drum-machine {
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-    }
-}
-
 #title {
     float: right;
     margin: 1vh 4vw;
@@ -118,10 +109,7 @@
     width: 20vw;
     flex-grow: 1;
     margin-top: 1vh;
-}
-
-#volume-control {
-    
+    text-align: center;
 }
 
 #bankDisplay, #volumeDisplay {
@@ -135,4 +123,21 @@
     margin: 1vh auto;
     border: 3px double white;
     border-radius: 0.8vh;
+}
+
+#bankButton {
+    width: 8vw;
+    height: 4vh;
+    margin: 3vh 0;
+    background-color: #e2e2e2;
+    outline: none;
+    border: 0.2vh solid black;
+    border-radius: 1vh;
+    box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
+}
+
+/* light up button */
+#bankButton:active {
+    background-color: #17db48;
+    box-shadow: none;
 }

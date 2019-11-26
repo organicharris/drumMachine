@@ -9,6 +9,7 @@ import '../styles/drumMachine.css'
 import '../styles/main.css'
 import '../styles/animations.css'
 import '../styles/volumeControl.css'
+import '../styles/mediaCalls.css'
 
 class App extends React.Component {
     constructor(props) {
@@ -268,7 +269,7 @@ class App extends React.Component {
                             </div>
                             <div id="bankSelect">
                                 {/* Switches sample bank and displays bank */}
-                                <button className="bankButton" type="button" onClick={this.bankSelect}>Switch bank</button>
+                                <button id="bankButton" type="button" onClick={this.bankSelect}>Switch bank</button>
                                 <div id="bankDisplay">sample-{this.state.sampleBank[0]}</div>
                             </div>
                         </div>
