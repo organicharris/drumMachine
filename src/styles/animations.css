@@ -1,0 +1,17 @@
+@keyframes linkOver {
+    0% {
+        color: #5a6163;
+    }
+    100% {
+        color: #1e7e9b;
+    }
+}
+
+@keyframes linkNotOver {
+    0% {
+        color: #1e7e9b;
+    }
+    100% {
+        color: #5a6163;
+    }
+}

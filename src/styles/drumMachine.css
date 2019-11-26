@@ -1,7 +1,7 @@
 #drum-machine {
     width: 70vw;
     height: 70vh;    
-    background-color: #888888;
+    background-color: #d3d3bd;
     position: absolute;
     top: 15vh;
     left: 15vw;
@@ -21,12 +21,28 @@
 
 #title {
     float: right;
-    margin: 1vh 2vw;
+    margin: 1vh 4vw;
+    font-family: 'Bree Serif', serif;
+    color: #d44742;
+    font-size: 1.5em;
 }
 
-#title a {
+#website {
+    float: left;
+    margin: 1.5vh 4vw;
+}
+
+#website a {
     text-decoration: none;
-    color: white;
+    color: #5a6163;
+}
+
+#website a:hover {
+    animation: linkOver 0.7s ease-in 0s 1 forwards;
+}
+
+#website a:not(:hover) {
+    animation: linkNotOver 0.7s ease-in 0s 1 forwards;
 }
 
 #display {
@@ -49,7 +65,7 @@
 }
 
 #pads {
-    background-color: #690b0b;
+    background-color: #d44742;
     border-radius: 1vh;
     width: 50vw;
     max-height: 53vh;
@@ -60,16 +76,7 @@
     margin: 0 1vw 0 0;
 }
 
-#master {
-    background-color: #d3d3bd;
-    border-radius: 1vh;
-    width: 20vw;
-}
-
 .drum-pad {
-    /*max-width: 10vw;
-    height: 10vh;
-    margin: 1vh 1vw;*/
     width: 10vw;
     height: 10vh;
     margin: 1vh 1vw;
@@ -92,14 +99,40 @@
     padding-bottom: 0.5vh;
 }
 
+#master {
+    display: flex;
+    flex-direction: column;
+}
+
+#volumeSlider {
+    background-color: #1e7e9b;
+    border-radius: 1vh;
+    width: 20vw;
+    flex-grow: 1;
+    margin-bottom: 1vh;
+}
+
+#bankSelect {
+    background-color: #5a6163;
+    border-radius: 1vh;
+    width: 20vw;
+    flex-grow: 1;
+    margin-top: 1vh;
+}
+
+#volume-control {
+    
+}
+
 #bankDisplay, #volumeDisplay {
     width: 15vw;
     background-color: #000000;
     color: #0a8f2b  ;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+    font-size: 0.8em;
     padding: 1vh 0;
-    margin: 5vh auto 1vh;
+    margin: 1vh auto;
     border: 3px double white;
     border-radius: 0.8vh;
 }

@@ -8,8 +8,7 @@ import { bankB } from './sampleBanks.js';
 import '../styles/drumMachine.css'
 import '../styles/main.css'
 import '../styles/animations.css'
-
-// import font awesome icons
+import '../styles/volumeControl.css'
 
 class App extends React.Component {
     constructor(props) {
@@ -183,7 +182,6 @@ class App extends React.Component {
         // pass audio clip to be played into function and trigger
         const keyArr = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
         this.samplePlayer(e.currentTarget.value);
-        console.log(e.currentTarget.value);
         this.setState({
             sampleObject: (keyArr.indexOf(e.currentTarget.value) + 1)
         });
@@ -200,7 +198,8 @@ class App extends React.Component {
         return (
             <div id="main">
                 <div id="drum-machine">
-                <div id="title"><a href="https://craigharrison.dev/" title="Craig Harrison" target="_blank" rel="noopener noreferrer">craigharrison.dev</a></div>
+                <div id="title">HACKAI</div>
+                <div id="website"><a href="https://craigharrison.dev/" title="Craig Harrison" target="_blank" rel="noopener noreferrer">craigharrison.dev</a></div>
                     <div id="display">
                         {this.state.sampleBank[this.state.sampleObject].sampleID}
                     </div>
