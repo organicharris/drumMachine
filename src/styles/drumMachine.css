@@ -91,3 +91,15 @@
     font-size: 1.5em;
     padding-bottom: 0.5vh;
 }
+
+#bankDisplay, #volumeDisplay {
+    width: 15vw;
+    background-color: #000000;
+    color: #0a8f2b  ;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 1vh 0;
+    margin: 5vh auto 1vh;
+    border: 3px double white;
+    border-radius: 0.8vh;
+}

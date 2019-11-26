@@ -182,9 +182,10 @@ class App extends React.Component {
     padTrigger(e) {
         // pass audio clip to be played into function and trigger
         const keyArr = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
-        this.samplePlayer(e.target.value);
+        this.samplePlayer(e.currentTarget.value);
+        console.log(e.currentTarget.value);
         this.setState({
-            sampleObject: (keyArr.indexOf(e.target.value) + 1)
+            sampleObject: (keyArr.indexOf(e.currentTarget.value) + 1)
         });
     }
 
@@ -264,12 +265,12 @@ class App extends React.Component {
                         <div id="master">
                             <div id="volumeSlider">
                                 <input type="range" min="0" max="100" value={Math.round(this.state.volumeControl * 100)} onChange={this.volumeChange} id="volume-control"></input>
-                                <div id="volume-display">{Math.round(this.state.volumeControl * 100)}</div>
+                                <div id="volumeDisplay">volume: {Math.round(this.state.volumeControl * 100)}</div>
                             </div>
                             <div id="bankSelect">
                                 {/* Switches sample bank and displays bank */}
                                 <button className="bankButton" type="button" onClick={this.bankSelect}>Switch bank</button>
-                                <div id="bankDisplay">Sample-{this.state.sampleBank[0]}</div>
+                                <div id="bankDisplay">sample-{this.state.sampleBank[0]}</div>
                             </div>
                         </div>
                     </div>
