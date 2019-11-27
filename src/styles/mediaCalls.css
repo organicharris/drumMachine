@@ -60,7 +60,7 @@
     }
 }
 
-@media(max-height: 700px) {
+@media(max-height: 760px) {
     #drum-machine {
         width: 100vw;
         height: 100vh;
@@ -85,5 +85,11 @@
     #bankButton {
         width: 12vw;
         height: 13vh;
+    }
+}
+
+@media(max-height: 560px) {
+    input[type=range]::-webkit-slider-thumb {
+        margin-top: -6px;
     }
 }
