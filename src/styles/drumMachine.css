@@ -62,7 +62,6 @@
     max-height: 53vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     margin-right: 1vw;
 }
