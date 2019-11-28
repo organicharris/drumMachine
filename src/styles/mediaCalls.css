@@ -60,7 +60,7 @@
     }
 }
 
-@media(max-height: 760px) {
+@media(max-height: 500px) {
     #drum-machine {
         width: 100vw;
         height: 100vh;
@@ -70,15 +70,21 @@
     }
 
     #title {
-        font-size: calc(1em + 0.5vw);
+        font-size: calc(0.6em + 0.5vw);
     }
 
     #website {
-        font-size: calc(0.6em + 0.5vw);
+        font-size: calc(0.4em + 0.5vw);
+    }
+
+    #display {
+        height: 2vh;
+        margin: 5vh auto 0;
     }
 
     #controls {
         height: 80vh;
+        margin-top: 0;
     }
 
     #pads {
@@ -87,12 +93,12 @@
     }
 
     .drum-pad {
-        height: 21vh;
+        height: 12vh;
     }
 
     #bankButton {
-        width: 12vw;
-        height: 13vh;
+        width: 24vw;
+        height: 7vh;
     }
 }
 
