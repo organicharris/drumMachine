@@ -4,6 +4,9 @@ import React from 'react';
 import { bankA } from './sampleBanks.js';
 import { bankB } from './sampleBanks.js';
 
+// import sequencer class
+import Sequencer, { sequencer } from './sequencer.jsx';
+
 // import css
 import '../styles/drumMachine.css'
 import '../styles/main.css'
@@ -273,6 +276,9 @@ class App extends React.Component {
                                 <div id="bankDisplay">sample-{this.state.sampleBank[0]}</div>
                             </div>
                         </div>
+
+                        <Sequencer />
+                        
                     </div>
                 </div>
             </div>
