@@ -15,3 +15,30 @@
         color: #808080;
     }
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInNotice {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 0.98;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}

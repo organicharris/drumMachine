@@ -1,11 +1,11 @@
 #sequencerLights {
     position: absolute;
     bottom: 15vh;
-    left: 6.5vw;
+    left: 4vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 75vw;
+    width: 90vw;
     background-color: #808080;
     padding: 1vh 1vw;
     border-radius: 1vh;
@@ -17,8 +17,8 @@
     width: 0.5vw;
     height: 0.5vw;
     border-radius: 50%;
-    flex: 0 1 1%;
-    margin: 1vh 2vw;
+    flex: 0 1 0.7%;
+    margin: 1vh 2.5vw;
 }
 
 .redLightOn {
