@@ -9,7 +9,7 @@
     margin-right: 1vw;
 }
 
-.drum-pad {
+.drumPad {
     width: 10vw;
     height: 10vh;
     margin: 1vh 1vw;
@@ -22,7 +22,8 @@
 }
 
 /* light up buttons */
-.drum-pad:active, .active {
+/*.drum-pad:active, .active {*/
+.drumPadActive {
     background-color: #dbbe17;
     box-shadow: none;
 }

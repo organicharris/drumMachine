@@ -1,0 +1,38 @@
+#sequencer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75vw;
+    background-color: #808080;
+}
+
+.seqPad {
+    height: 5vh;
+    margin: 1vh 1vw;
+    outline: none;
+    border: 0.2vh solid black;
+    border-radius: 0.7vh;
+    box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
+    flex: 1 1 8%;
+}
+
+.seqPadA {
+    background-color: #cd311e;
+}
+
+.seqPadB {
+    background-color: #e2792e;
+}
+
+.seqPadC {
+    background-color: #e1dc49;
+}
+
+.seqPadD {
+    background-color: #f1f1f1;
+}
+
+.seqPadActive {
+    background-color: #3ad31c;
+    box-shadow: none;
+}

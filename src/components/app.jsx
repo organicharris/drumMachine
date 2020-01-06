@@ -28,7 +28,6 @@ class App extends React.Component {
                     </div>
                     <div id="controls">
                         <DrumPads />
-                        <Sequencer />
                         <Master />
                     </div>
                 </div>
