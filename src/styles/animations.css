@@ -1,17 +1,17 @@
 @keyframes linkOver {
     0% {
-        color: #5a6163;
+        color: #808080;
     }
     100% {
-        color: #d44742;
+        color: #cc4a22;
     }
 }
 
 @keyframes linkNotOver {
     0% {
-        color: #d44742;
+        color: #cc4a22;
     }
     100% {
-        color: #5a6163;
+        color: #808080;
     }
 }

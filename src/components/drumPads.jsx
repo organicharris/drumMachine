@@ -164,22 +164,22 @@ class DrumPads extends React.Component {
                 </div>
 
                 <div id="sequencer">
-                    <button type="button" className={this.state.seqPad1} id="seqPad1" value="0" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad2} id="seqPad2" value="1" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad3} id="seqPad3" value="2" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad4} id="seqPad4" value="3" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad5} id="seqPad5" value="4" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad6} id="seqPad6" value="5" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad7} id="seqPad7" value="6" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad8} id="seqPad8" value="7" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad9} id="seqPad9" value="8" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad10} id="seqPad10" value="9" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad11} id="seqPad11" value="10" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad12} id="seqPad12" value="11" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad13} id="seqPad13" value="12" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad14} id="seqPad14" value="13" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad15} id="seqPad15" value="14" onClick={this.programSequence}></button>
-                    <button type="button" className={this.state.seqPad16} id="seqPad16" value="15" onClick={this.programSequence}></button>
+                    <button type="button" className={this.state.seqPad1} id="seqPad1" value="0" onClick={this.programSequence}>1</button>
+                    <button type="button" className={this.state.seqPad2} id="seqPad2" value="1" onClick={this.programSequence}>2</button>
+                    <button type="button" className={this.state.seqPad3} id="seqPad3" value="2" onClick={this.programSequence}>3</button>
+                    <button type="button" className={this.state.seqPad4} id="seqPad4" value="3" onClick={this.programSequence}>4</button>
+                    <button type="button" className={this.state.seqPad5} id="seqPad5" value="4" onClick={this.programSequence}>5</button>
+                    <button type="button" className={this.state.seqPad6} id="seqPad6" value="5" onClick={this.programSequence}>6</button>
+                    <button type="button" className={this.state.seqPad7} id="seqPad7" value="6" onClick={this.programSequence}>7</button>
+                    <button type="button" className={this.state.seqPad8} id="seqPad8" value="7" onClick={this.programSequence}>8</button>
+                    <button type="button" className={this.state.seqPad9} id="seqPad9" value="8" onClick={this.programSequence}>9</button>
+                    <button type="button" className={this.state.seqPad10} id="seqPad10" value="9" onClick={this.programSequence}>10</button>
+                    <button type="button" className={this.state.seqPad11} id="seqPad11" value="10" onClick={this.programSequence}>11</button>
+                    <button type="button" className={this.state.seqPad12} id="seqPad12" value="11" onClick={this.programSequence}>12</button>
+                    <button type="button" className={this.state.seqPad13} id="seqPad13" value="12" onClick={this.programSequence}>13</button>
+                    <button type="button" className={this.state.seqPad14} id="seqPad14" value="13" onClick={this.programSequence}>14</button>
+                    <button type="button" className={this.state.seqPad15} id="seqPad15" value="14" onClick={this.programSequence}>15</button>
+                    <button type="button" className={this.state.seqPad16} id="seqPad16" value="15" onClick={this.programSequence}>16</button>
                 </div>
             </div>
         )

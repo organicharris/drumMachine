@@ -1,12 +1,13 @@
 #pads {
-    background-color: #d44742;
+    flex: 1 1 60%;
+    background-color: #808080;
     border-radius: 1vh;
-    width: 50vw;
-    max-height: 53vh;
+    max-height: 55vh;
+    padding: 1vh 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-right: 1vw;
+    margin: 0 1vw;
 }
 
 .drumPad {
@@ -21,8 +22,6 @@
     flex: 1 0 25%;
 }
 
-/* light up buttons */
-/*.drum-pad:active, .active {*/
 .drumPadActive {
     background-color: #dbbe17;
     box-shadow: none;
