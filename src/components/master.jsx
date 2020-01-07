@@ -1,8 +1,9 @@
 import React from 'react';
 
-import '../styles/volumeControl.css';
-import '../styles/sequencerLights.css';
-import '../styles/master.css';
+// Import samples and sequence, along with padArr as key
+import { bankA } from './sampleBanks.js';
+import { sequence } from './sequence.js';
+import { seqPadArr } from './padArrays.js';
 
 // import Font Awesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +11,11 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faPause } from "@fortawesome/free-solid-svg-icons";
 import { faStepBackward } from "@fortawesome/free-solid-svg-icons";
 import { faStop } from "@fortawesome/free-solid-svg-icons";
+
+// CSS
+import '../styles/volumeControl.css';
+import '../styles/sequencerLights.css';
+import '../styles/master.css';
 
 class Master extends React.Component {
     constructor(props) {
@@ -19,34 +25,36 @@ class Master extends React.Component {
             volumeControl: 0.8,
             tempo: 1.2,
             // Play controls
-            play: false,
-            pause: false,
+            playing: false,
             playPauseButtton: "playControl",
             stopButton: "playControl stopButtonActive",
             playHead: 0,
             // Sequencer light classes
-            redLight1: "redLight",
-            redLight2: "redLight",
-            redLight3: "redLight",
-            redLight4: "redLight",
-            redLight5: "redLight",
-            redLight6: "redLight",
-            redLight7: "redLight",
-            redLight8: "redLight",
-            redLight9: "redLight",
-            redLight10: "redLight",
-            redLight11: "redLight",
-            redLight12: "redLight",
-            redLight13: "redLight",
-            redLight14: "redLight",
-            redLight15: "redLight",
-            redLight16: "redLight"
+            seqPad1: "redLight redLightOn",
+            seqPad2: "redLight",
+            seqPad3: "redLight",
+            seqPad4: "redLight",
+            seqPad5: "redLight",
+            seqPad6: "redLight",
+            seqPad7: "redLight",
+            seqPad8: "redLight",
+            seqPad9: "redLight",
+            seqPad10: "redLight",
+            seqPad11: "redLight",
+            seqPad12: "redLight",
+            seqPad13: "redLight",
+            seqPad14: "redLight",
+            seqPad15: "redLight",
+            seqPad16: "redLight"
         }
 
         // Function binding
         this.volumeChange = this.volumeChange.bind(this); 
         this.tempoChange = this.tempoChange.bind(this);  
-        this.playControl = this.playControl.bind(this);     
+        this.playControl = this.playControl.bind(this); 
+        this.operateSequencer = this.operateSequencer.bind(this);   
+        this.sequenceLights = this.sequenceLights.bind(this); 
+        this.sequenceSounds = this.sequenceSounds.bind(this);
     }
 
     volumeChange(e) {
@@ -64,43 +72,146 @@ class Master extends React.Component {
     playControl(e) {
         switch(e.currentTarget.value) {
             case "playPause":
-                if (!this.state.play && !this.state.pause) {
+                if (!this.state.playing) { // If not playing, start and change to green
                     this.setState({
-                        play: true,
+                        playing: true,
                         playPauseButtton: "playControl playButtonActive",
-                        stopButton: "playControl"
+                        stopButton: "playControl" 
                     });
-                } else if (this.state.play && !this.state.pause) {
+                } else { // If playing, pause and change to yellow
                     this.setState({
-                        pause: true,
+                        playing: false,
                         playPauseButtton: "playControl pauseButtonActive"
-                    });
-                } else { // If play and pause are active
-                    this.setState({
-                        pause: false,
-                        playPauseButtton: "playControl playButtonActive"
-                    });
-                };
+                    })
+                }
+                this.operateSequencer();
                 break;
             
             case "stop":
                 this.setState({
-                    play: false,
-                    pause: false,
+                    playing: false,
                     playPauseButtton: "playControl",
                     stopButton: "playControl stopButtonActive"
                 });
+                this.operateSequencer();
                 break;
             
             case "RTZ":
                 this.setState({
-                    playHead: 0
+                    playHead: 0,
+                    seqPad1: "redLight redLightOn",
+                    seqPad2: "redLight",
+                    seqPad3: "redLight",
+                    seqPad4: "redLight",
+                    seqPad5: "redLight",
+                    seqPad6: "redLight",
+                    seqPad7: "redLight",
+                    seqPad8: "redLight",
+                    seqPad9: "redLight",
+                    seqPad10: "redLight",
+                    seqPad11: "redLight",
+                    seqPad12: "redLight",
+                    seqPad13: "redLight",
+                    seqPad14: "redLight",
+                    seqPad15: "redLight",
+                    seqPad16: "redLight"
                 });
                 break;
 
             default:
                 break;
         };
+    }
+
+    operateSequencer() {
+            setTimeout(() => { // Uses timeout and call function again instead of loop
+                if (this.state.playing) {
+                    this.sequenceLights();
+                    this.sequenceSounds();
+                    if (this.state.playHead < 15) { // If less than 15, increment
+                        this.setState({
+                            playHead: this.state.playHead + 1
+                        });
+                    } else { // If 15, set back to zero to start loop again
+                        this.setState({
+                            playHead: 0
+                        });
+                    }
+                    this.operateSequencer(); // Call function after next timeout
+                } else { // If not playing, keep the playHead position
+                    this.setState({
+                        playHead: this.state.playHead
+                    });
+                };
+            }, (60 / this.state.tempo) * 2.5);
+    }
+
+    sequenceLights() {
+        if(this.state.playHead === 0) {
+            this.setState({
+                seqPad1: "redLight redLightOn",
+                seqPad16: "redLight"
+            });
+        } else {
+            this.setState({
+                [seqPadArr[this.state.playHead]]: "redLight redLightOn",
+                [seqPadArr[this.state.playHead - 1]]: "redLight"
+            });
+        }
+    }
+
+    sequenceSounds() {
+        // Load in samples
+        const track1 = new Audio(bankA[0].url);
+        const track2 = new Audio(bankA[1].url);
+        const track3 = new Audio(bankA[2].url);
+        const track4 = new Audio(bankA[3].url);
+        const track5 = new Audio(bankA[4].url);
+        const track6 = new Audio(bankA[5].url);
+        const track7 = new Audio(bankA[6].url);
+        const track8 = new Audio(bankA[7].url);
+        const track9 = new Audio(bankA[8].url);
+        const track10 = new Audio(bankA[9].url);
+        const track11 = new Audio(bankA[10].url);
+        const track12 = new Audio(bankA[11].url);
+
+        // Trigger samples
+        if (sequence[0][this.state.playHead] === 1) {
+            track1.play();
+        }
+        if (sequence[1][this.state.playHead] === 1) {
+            track2.play();
+        }
+        if (sequence[2][this.state.playHead] === 1) {
+            track3.play();
+        }
+        if (sequence[3][this.state.playHead] === 1) {
+            track4.play();
+        }
+        if (sequence[4][this.state.playHead] === 1) {
+            track5.play();
+        }
+        if (sequence[5][this.state.playHead] === 1) {
+            track6.play();
+        }
+        if (sequence[6][this.state.playHead] === 1) {
+            track7.play();
+        }
+        if (sequence[7][this.state.playHead] === 1) {
+            track8.play();
+        }
+        if (sequence[8][this.state.playHead] === 1) {
+            track9.play();
+        }
+        if (sequence[9][this.state.playHead] === 1) {
+            track10.play();
+        }
+        if (sequence[10][this.state.playHead] === 1) {
+            track11.play();
+        }
+        if (sequence[11][this.state.playHead] === 1) {
+            track12.play();
+        }
     }
 
     render() {
@@ -122,22 +233,22 @@ class Master extends React.Component {
                     </div>
                 </div>
                 <div id="sequencerLights">
-                    <div className={this.state.redLight1} id="light1"></div>
-                    <div className={this.state.redLight2} id="light2"></div>
-                    <div className={this.state.redLight3} id="light3"></div>
-                    <div className={this.state.redLight4} id="light4"></div>
-                    <div className={this.state.redLight5} id="light5"></div>
-                    <div className={this.state.redLight6} id="light6"></div>
-                    <div className={this.state.redLight7} id="light7"></div>
-                    <div className={this.state.redLight8} id="light8"></div>
-                    <div className={this.state.redLight9} id="light9"></div>
-                    <div className={this.state.redLight10} id="light10"></div>
-                    <div className={this.state.redLight11} id="light11"></div>
-                    <div className={this.state.redLight12} id="light12"></div>
-                    <div className={this.state.redLight13} id="light13"></div>
-                    <div className={this.state.redLight14} id="light14"></div>
-                    <div className={this.state.redLight15} id="light15"></div>
-                    <div className={this.state.redLight16} id="light16"></div>
+                    <div className={this.state.seqPad1} id="light1"></div>
+                    <div className={this.state.seqPad2} id="light2"></div>
+                    <div className={this.state.seqPad3} id="light3"></div>
+                    <div className={this.state.seqPad4} id="light4"></div>
+                    <div className={this.state.seqPad5} id="light5"></div>
+                    <div className={this.state.seqPad6} id="light6"></div>
+                    <div className={this.state.seqPad7} id="light7"></div>
+                    <div className={this.state.seqPad8} id="light8"></div>
+                    <div className={this.state.seqPad9} id="light9"></div>
+                    <div className={this.state.seqPad10} id="light10"></div>
+                    <div className={this.state.seqPad11} id="light11"></div>
+                    <div className={this.state.seqPad12} id="light12"></div>
+                    <div className={this.state.seqPad13} id="light13"></div>
+                    <div className={this.state.seqPad14} id="light14"></div>
+                    <div className={this.state.seqPad15} id="light15"></div>
+                    <div className={this.state.seqPad16} id="light16"></div>
                 </div>
                 
             </div>

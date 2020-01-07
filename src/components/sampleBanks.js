@@ -1,6 +1,4 @@
 const bankA = [
-    // First array entry shows name of bank
-    "808 kit",
     {sampleID: 'Deep Kick', url: "https://staticserver.craigharrison.dev/drumMachineSamples/deepKick.mp3"}, 
     {sampleID: 'Punchy Kick', url: "https://staticserver.craigharrison.dev/drumMachineSamples/punchyKick.mp3"}, 
     {sampleID: 'Closed Hat', url: "https://staticserver.craigharrison.dev/drumMachineSamples/closedHat.mp3"}, 
@@ -12,8 +10,7 @@ const bankA = [
     {sampleID: 'Cymbal', url: "https://staticserver.craigharrison.dev/drumMachineSamples/cymbal.mp3"},
     {sampleID: 'Shaker 1', url: "https://staticserver.craigharrison.dev/drumMachineSamples/shaker1.mp3"},
     {sampleID: 'Shaker 2', url: "https://staticserver.craigharrison.dev/drumMachineSamples/shaker2.mp3"},
-    {sampleID: 'Cowbell', url: "https://staticserver.craigharrison.dev/drumMachineSamples/cowbell.mp3"},
-    {sampleID: "---"} // last entry acts as placeholder
+    {sampleID: 'Cowbell', url: "https://staticserver.craigharrison.dev/drumMachineSamples/cowbell.mp3"}
 ];
 
 module.exports.bankA = bankA;

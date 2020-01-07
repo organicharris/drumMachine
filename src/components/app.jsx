@@ -4,15 +4,15 @@ import React from 'react';
 import DrumPads from './drumPads.jsx';
 import Master from './master.jsx';
 
-// import css
+// import Font Awesome icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+
+// CSS
 import '../styles/drumMachine.css';
 import '../styles/main.css';
 import '../styles/animations.css';
 import '../styles/mediaCalls.css';
-
-// import Font Awesome icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 
 class App extends React.Component {
 
