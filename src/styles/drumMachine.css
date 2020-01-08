@@ -16,20 +16,27 @@
 
 #website {
     float: left;
-    margin: 2.5vh 6vw;
+    margin: 2.5vh 0 2.5vh 6vw;
     font-size: calc(0.5em + 0.5vw);
 }
 
-#website a {
+#gitHub {
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    font-size: calc(1.2em + 0.5vw);
+}
+
+#website a, #gitHub a {
     text-decoration: none;
     color: #808080;
     font-family: 'Poppins', sans-serif;
 }
 
-#website a:hover {
+#website a:hover, #gitHub a:hover {
     animation: linkOver 0.7s ease-in 0s 1 forwards;
 }
 
-#website a:not(:hover) {
+#website a:not(:hover), #gitHub a:not(:hover) {
     animation: linkNotOver 0.7s ease-in 0s 1 forwards;
 }

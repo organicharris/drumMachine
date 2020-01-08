@@ -6,6 +6,7 @@ import Controls from './controls.jsx';
 // import Font Awesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 // CSS
 import '../styles/drumMachine.css';
@@ -25,6 +26,7 @@ class App extends React.Component {
                 <div id="drum-machine">
                 <div id="title">Beat Composer</div>
                 <div id="website"><a href="https://craigharrison.dev/" title="Craig Harrison" target="_blank" rel="noopener noreferrer">craigharrison.dev</a></div>
+                <div id="gitHub"><a href="https://github.com/organicharris/drumMachine" title="source code" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare}/></a></div>
                 <Controls />
                 </div>
             </div>
