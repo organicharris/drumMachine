@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    /*animation: fadeIn 0.5s linear 1.5s 1 both;*/
+    animation: fadeIn 0.5s linear 1.5s 1 both;
 }
 
 #title {
