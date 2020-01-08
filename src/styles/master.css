@@ -18,7 +18,7 @@
     color: #0a8f2b  ;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
-    font-size: 0.8em;
+    font-size: calc(0.3em + 0.5vw);
     padding: 1vh 0;
     margin: 0 1vw 1vh;
     border: 3px double #b6b6b6;

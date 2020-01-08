@@ -50,6 +50,7 @@ class Master extends React.Component {
 
         // Function binding
         this.volumeChange = this.volumeChange.bind(this); 
+        this.sampleVolChange = this.sampleVolChange.bind(this);
         this.tempoChange = this.tempoChange.bind(this);  
         this.playControl = this.playControl.bind(this); 
         this.operateSequencer = this.operateSequencer.bind(this);   
@@ -60,6 +61,13 @@ class Master extends React.Component {
     volumeChange(e) {
         this.setState({
             volumeControl: e.target.value / 100
+        });
+    }
+
+    sampleVolChange(e) {
+        bankA[this.props.selectedPad].volume = e.currentTarget.value / 100;
+        this.setState({
+            // Refreshes DOM
         });
     }
 
@@ -220,7 +228,11 @@ class Master extends React.Component {
                 <div id="master">
                     <div id="volumeSlider" className="slider">
                         <input type="range" min="0" max="100" value={Math.round(this.state.volumeControl * 100)} onChange={this.volumeChange} id="volume-control"></input>
-                        <div id="volumeDisplay" className="display">volume: {Math.round(this.state.volumeControl * 100)}</div>
+                        <div id="volumeDisplay" className="display">master vol: {Math.round(this.state.volumeControl * 100)}%</div>
+                    </div>
+                    <div id="sampleVolSlider" className="slider">
+                        <input type="range" min="0" max="100" value={Math.round(bankA[this.props.selectedPad].volume * 100)} onChange={this.sampleVolChange} id="sampleVolControl"></input>
+                        <div id="chanVolDisplay" className="display">channel volume: {Math.round(bankA[this.props.selectedPad].volume * 100)}%</div>
                     </div>
                     <div id="tempoSlider" className="slider">
                         <input type="range" min="60" max="240" value={Math.round(this.state.tempo * 100)} onChange={this.tempoChange} id="tempoContol"></input>
