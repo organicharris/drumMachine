@@ -12,6 +12,9 @@ import { faPause } from "@fortawesome/free-solid-svg-icons";
 import { faStepBackward } from "@fortawesome/free-solid-svg-icons";
 import { faStop } from "@fortawesome/free-solid-svg-icons";
 
+// Import Howler for audio (https://github.com/goldfire/howler.js)
+import { Howl } from 'howler';
+
 // CSS
 import '../styles/volumeControl.css';
 import '../styles/sequencerLights.css';
@@ -170,18 +173,66 @@ class Master extends React.Component {
 
     sequenceSounds() {
         // Load in samples
-        const track1 = new Audio(bankA[0].url);
-        const track2 = new Audio(bankA[1].url);
-        const track3 = new Audio(bankA[2].url);
-        const track4 = new Audio(bankA[3].url);
-        const track5 = new Audio(bankA[4].url);
-        const track6 = new Audio(bankA[5].url);
-        const track7 = new Audio(bankA[6].url);
-        const track8 = new Audio(bankA[7].url);
-        const track9 = new Audio(bankA[8].url);
-        const track10 = new Audio(bankA[9].url);
-        const track11 = new Audio(bankA[10].url);
-        const track12 = new Audio(bankA[11].url);
+        var track1 = new Howl({
+            src: [bankA[0].url],
+            volume: bankA[0].volume,
+            preload: true
+        });
+        var track2 = new Howl({
+            src: [bankA[1].url],
+            volume: bankA[1].volume,
+            preload: true
+        });
+        var track3 = new Howl({
+            src: [bankA[2].url],
+            volume: bankA[2].volume,
+            preload: true
+        });
+        var track4 = new Howl({
+            src: [bankA[3].url],
+            volume: bankA[3].volume,
+            preload: true
+        });
+        var track5 = new Howl({
+            src: [bankA[4].url],
+            volume: bankA[4].volume,
+            preload: true
+        });
+        var track6 = new Howl({
+            src: [bankA[5].url],
+            volume: bankA[5].volume,
+            preload: true
+        });
+        var track7 = new Howl({
+            src: [bankA[6].url],
+            volume: bankA[6].volume,
+            preload: true
+        });
+        var track8 = new Howl({
+            src: [bankA[7].url],
+            volume: bankA[7].volume,
+            preload: true
+        });
+        var track9 = new Howl({
+            src: [bankA[8].url],
+            volume: bankA[8].volume,
+            preload: true
+        });
+        var track10 = new Howl({
+            src: [bankA[9].url],
+            volume: bankA[9].volume,
+            preload: true
+        });
+        var track11 = new Howl({
+            src: [bankA[10].url],
+            volume: bankA[10].volume,
+            preload: true
+        });
+        var track12 = new Howl({
+            src: [bankA[11].url],
+            volume: bankA[11].volume,
+            preload: true
+        });
 
         // Trigger samples
         if (sequence[0][this.state.playHead] === 1) {
