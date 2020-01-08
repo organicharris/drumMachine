@@ -6,11 +6,7 @@ const drumPadArr = [
     "pad5",
     "pad6",
     "pad7",
-    "pad8",
-    "pad9",
-    "pad10",
-    "pad11",
-    "pad12"
+    "pad8"
 ];
 
 const seqPadArr = [

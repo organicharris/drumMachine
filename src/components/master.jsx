@@ -213,26 +213,6 @@ class Master extends React.Component {
             volume: bankA[7].volume,
             preload: true
         });
-        var track9 = new Howl({
-            src: [bankA[8].url],
-            volume: bankA[8].volume,
-            preload: true
-        });
-        var track10 = new Howl({
-            src: [bankA[9].url],
-            volume: bankA[9].volume,
-            preload: true
-        });
-        var track11 = new Howl({
-            src: [bankA[10].url],
-            volume: bankA[10].volume,
-            preload: true
-        });
-        var track12 = new Howl({
-            src: [bankA[11].url],
-            volume: bankA[11].volume,
-            preload: true
-        });
 
         // Trigger samples
         if (sequence[0][this.state.playHead] === 1) {
@@ -258,18 +238,6 @@ class Master extends React.Component {
         }
         if (sequence[7][this.state.playHead] === 1) {
             track8.play();
-        }
-        if (sequence[8][this.state.playHead] === 1) {
-            track9.play();
-        }
-        if (sequence[9][this.state.playHead] === 1) {
-            track10.play();
-        }
-        if (sequence[10][this.state.playHead] === 1) {
-            track11.play();
-        }
-        if (sequence[11][this.state.playHead] === 1) {
-            track12.play();
         }
     }
 

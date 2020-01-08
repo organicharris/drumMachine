@@ -27,10 +27,6 @@ class Controls extends React.Component {
             pad6: "drumPad",
             pad7: "drumPad",
             pad8: "drumPad",
-            pad9: "drumPad",
-            pad10: "drumPad",
-            pad11: "drumPad",
-            pad12: "drumPad",
             // Sequencer pads
             seqPad1: "seqPad seqPadA",
             seqPad2: "seqPad seqPadA",
@@ -151,18 +147,6 @@ class Controls extends React.Component {
                         </button>
                         <button className={this.state.pad8} id="pad8" type="button" onClick={this.padSelect} value="7">
                             <div className="sampleName">{bankA[7].sampleID}</div>
-                        </button>
-                        <button className={this.state.pad9} id="pad9" type="button" onClick={this.padSelect} value="8">
-                            <div className="sampleName">{bankA[8].sampleID}</div>
-                        </button>
-                        <button className={this.state.pad10} id="pad10" type="button" onClick={this.padSelect} value="9">
-                            <div className="sampleName">{bankA[9].sampleID}</div>
-                        </button>
-                        <button className={this.state.pad11} id="pad11" type="button" onClick={this.padSelect} value="10">
-                            <div className="sampleName">{bankA[10].sampleID}</div>
-                        </button>
-                        <button className={this.state.pad12} id="pad12" type="button" onClick={this.padSelect} value="11">
-                            <div className="sampleName">{bankA[11].sampleID}</div>
                         </button>
                     </div>
                     {/* Call master component and pass selectedPad as props */}
