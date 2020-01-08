@@ -1,10 +1,10 @@
 #sequencer {
     position: absolute;
-    bottom: 5vh;
+    bottom: 15vh;
     left: 4vw;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 90vw;
     background-color: #808080;
     padding: 1vh 1vw;
@@ -13,13 +13,13 @@
 
 .seqPad {
     height: 5vh;
-    margin: 1vh 0.5vw;
+    margin: 1vh 0.1vw;
     outline: none;
     border: 0.2vh solid black;
     border-radius: 0.7vh;
     box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
-    flex: 1 1 8%;
-    font-size: 1em;
+    flex: 1 1 2%;
+    font-size: calc(0.5em + 0.5vw);
     font-weight: 600;
 }
 

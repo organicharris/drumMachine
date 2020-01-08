@@ -1,32 +1,36 @@
 #master {
-    flex: 1 1 30%;
+    flex: 1 1 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 1vw;
     border: 0.2vw solid #cc4a22;
     border-radius: 1vw;
+    background-color: #808080;
+    height: 45vh;
+    min-width: 45vw;
 }
 
 .slider {
-    flex: 1 1 15%;
+    flex: 1 1 50%;
+    max-width: 15vw;
 }
 
 .display {
-    width: 15vw;
-    flex: 1 1 15%;
+    width: 10vw;
     background-color: #000000;
     color: #0a8f2b  ;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     font-size: calc(0.3em + 0.5vw);
     padding: 1vh 0;
-    margin: 0 1vw 1vh;
+    margin: 0 3vw 1vh;
     border: 3px double #b6b6b6;
     border-radius: 0.8vh;
 }
 
 #playControls {
-    flex: 1 1 15%;
+    flex: 1 1 50%;
     margin: 1vh 0;
     display: flex;
     flex-direction: row;
@@ -41,7 +45,7 @@
     border-radius: 0.7vh;
     box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
     flex: 0 1 28%;
-    font-size: 1em;
+    font-size: calc(0.5em + 0.5vw);
     font-weight: 600;
 }
 

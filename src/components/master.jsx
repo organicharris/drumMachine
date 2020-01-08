@@ -295,6 +295,7 @@ class Master extends React.Component {
                         <button type="button" className={this.state.stopButton} id="stopButton" value="stop" onClick={this.playControl}><FontAwesomeIcon icon={faStop}/></button>
                     </div>
                 </div>
+
                 <div id="sequencerLights">
                     <div className={this.state.seqPad1} id="light1"></div>
                     <div className={this.state.seqPad2} id="light2"></div>

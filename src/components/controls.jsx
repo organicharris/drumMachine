@@ -129,40 +129,40 @@ class Controls extends React.Component {
                 <div id="mainArea">
                     <div id="pads">
                         <button className={this.state.pad1} id="pad1" type="button" onClick={this.padSelect} value="0">
-                            <div className="letter">{bankA[0].sampleID}</div>
+                            <div className="sampleName">{bankA[0].sampleID}</div>
                         </button>
                         <button className={this.state.pad2} id="pad2" type="button" onClick={this.padSelect} value="1">
-                            <div className="letter">{bankA[1].sampleID}</div>
+                            <div className="sampleName">{bankA[1].sampleID}</div>
                         </button>
                         <button className={this.state.pad3} id="pad3" type="button" onClick={this.padSelect} value="2">
-                            <div className="letter">{bankA[2].sampleID}</div>
+                            <div className="sampleName">{bankA[2].sampleID}</div>
                         </button>
                         <button className={this.state.pad4} id="pad4" type="button" onClick={this.padSelect} value="3">
-                            <div className="letter">{bankA[3].sampleID} </div>
+                            <div className="sampleName">{bankA[3].sampleID} </div>
                         </button>
                         <button className={this.state.pad5} id="pad5" type="button" onClick={this.padSelect} value="4">
-                            <div className="letter">{bankA[4].sampleID}</div>
+                            <div className="sampleName">{bankA[4].sampleID}</div>
                         </button>
                         <button className={this.state.pad6} id="pad6" type="button" onClick={this.padSelect} value="5">
-                            <div className="letter">{bankA[5].sampleID}</div>
+                            <div className="sampleName">{bankA[5].sampleID}</div>
                         </button>
                         <button className={this.state.pad7} id="pad7" type="button" onClick={this.padSelect} value="6">
-                            <div className="letter">{bankA[6].sampleID}</div>
+                            <div className="sampleName">{bankA[6].sampleID}</div>
                         </button>
                         <button className={this.state.pad8} id="pad8" type="button" onClick={this.padSelect} value="7">
-                            <div className="letter">{bankA[7].sampleID}</div>
+                            <div className="sampleName">{bankA[7].sampleID}</div>
                         </button>
                         <button className={this.state.pad9} id="pad9" type="button" onClick={this.padSelect} value="8">
-                            <div className="letter">{bankA[8].sampleID}</div>
+                            <div className="sampleName">{bankA[8].sampleID}</div>
                         </button>
                         <button className={this.state.pad10} id="pad10" type="button" onClick={this.padSelect} value="9">
-                            <div className="letter">{bankA[9].sampleID}</div>
+                            <div className="sampleName">{bankA[9].sampleID}</div>
                         </button>
                         <button className={this.state.pad11} id="pad11" type="button" onClick={this.padSelect} value="10">
-                            <div className="letter">{bankA[10].sampleID}</div>
+                            <div className="sampleName">{bankA[10].sampleID}</div>
                         </button>
                         <button className={this.state.pad12} id="pad12" type="button" onClick={this.padSelect} value="11">
-                            <div className="letter">{bankA[11].sampleID}</div>
+                            <div className="sampleName">{bankA[11].sampleID}</div>
                         </button>
                     </div>
                     {/* Call master component and pass selectedPad as props */}

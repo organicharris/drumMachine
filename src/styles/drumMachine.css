@@ -11,12 +11,13 @@
     float: right;
     margin: 2vh 6vw;
     color: #cc4a22;
-    font-size: 1.9em;
+    font-size: calc(1.1em + 0.5vw);
 }
 
 #website {
     float: left;
     margin: 2.5vh 6vw;
+    font-size: calc(0.5em + 0.5vw);
 }
 
 #website a {
