@@ -9,4 +9,4 @@ const bankA = [
     {sampleID: 'Cowbell', url: "https://staticserver.craigharrison.dev/drumMachineSamples/cowbell.mp3", volume: 0.4}
 ];
 
-module.exports.bankA = bankA;
+export default bankA;

@@ -1,4 +1,4 @@
-const drumPadArr = [
+export const drumPadArr = [
     "pad1",
     "pad2",
     "pad3",
@@ -9,7 +9,7 @@ const drumPadArr = [
     "pad8"
 ];
 
-const seqPadArr = [
+export const seqPadArr = [
     "seqPad1",
     "seqPad2",
     "seqPad3",
@@ -27,6 +27,3 @@ const seqPadArr = [
     "seqPad15",
     "seqPad16"
 ];
-
-module.exports.drumPadArr = drumPadArr;
-module.exports.seqPadArr = seqPadArr;

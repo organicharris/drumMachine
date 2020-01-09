@@ -4,10 +4,9 @@ import React from 'react';
 import Master from './master.jsx';
 
 // import sample arrays, sequence and padArrays (as keys)
-import { bankA } from './sampleBanks.js';
-import { sequence } from './sequence.js';
-import { drumPadArr } from './padArrays.js';
-import { seqPadArr } from './padArrays.js';
+import bankA from './sampleBanks.js';
+import sequence from './sequence.js';
+import { drumPadArr, seqPadArr } from './padArrays.js';
 
 // CSS
 import '../styles/controls.css';

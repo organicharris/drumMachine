@@ -1,8 +1,11 @@
 import React from 'react';
 
+// Import Howler for audio (https://github.com/goldfire/howler.js)
+import { Howl } from 'howler';
+
 // Import samples and sequence, along with padArr as key
-import { bankA } from './sampleBanks.js';
-import { sequence } from './sequence.js';
+import bankA from './sampleBanks.js';
+import sequence from './sequence.js';
 import { seqPadArr } from './padArrays.js';
 
 // import Font Awesome icons
@@ -13,7 +16,7 @@ import { faStepBackward } from "@fortawesome/free-solid-svg-icons";
 import { faStop } from "@fortawesome/free-solid-svg-icons";
 
 // Import Howler for audio (https://github.com/goldfire/howler.js)
-import { Howl } from 'howler';
+//import { Howl } from 'howler';
 
 // CSS
 import '../styles/volumeControl.css';
