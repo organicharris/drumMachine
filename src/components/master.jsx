@@ -1,10 +1,10 @@
 import React from 'react';
-
+/*
 // Import Howler for audio (https://github.com/goldfire/howler.js)
 import { Howl } from 'howler';
-
+*/
 // Import samples and sequence, along with padArr as key
-import bankA from './sampleBanks.js';
+import { bankA, track1, track2, track3, track4, track5, track6, track7, track8 } from './sampleBanks.js';
 import sequence from './sequence.js';
 import { seqPadArr } from './padArrays.js';
 
@@ -72,6 +72,7 @@ class Master extends React.Component {
 
     sampleVolChange(e) {
         bankA[this.props.selectedPad].volume = e.currentTarget.value / 100;
+        //chanVolumeUpdate(this.props.selectedPad);
         this.setState({
             // Refreshes DOM
         });
@@ -176,6 +177,7 @@ class Master extends React.Component {
 
     sequenceSounds() {
         // Load in samples
+/*
         var track1 = new Howl({
             src: [bankA[0].url],
             volume: bankA[0].volume,
@@ -216,6 +218,7 @@ class Master extends React.Component {
             volume: bankA[7].volume,
             preload: true
         });
+*/
 
         // Trigger samples
         if (sequence[0][this.state.playHead] === 1) {
