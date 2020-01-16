@@ -12,7 +12,6 @@ import { drumPadArr, seqPadArr } from './padArrays.js';
 import '../styles/controls.css';
 import '../styles/sequencer.css';
 
-
 class Controls extends React.Component {
     constructor(props) {
         super(props);
