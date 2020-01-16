@@ -13,11 +13,11 @@
 
 .slider {
     flex: 1 1 50%;
-    max-width: 15vw;
+    max-width: 25vw;
 }
 
 .display {
-    width: 10vw;
+    width: 15vw;
     background-color: #000000;
     color: #0a8f2b  ;
     font-family: 'Press Start 2P', cursive;
@@ -59,12 +59,7 @@
     box-shadow: none;
 }
 
-.pauseButtonActive {
-    background-color: #dbbe17;
-    box-shadow: none;
-}
-
-#returnToZeroButton:active {
+.pauseButtonActive, #returnToZeroButton:active {
     background-color: #dbbe17;
     box-shadow: none;
 }

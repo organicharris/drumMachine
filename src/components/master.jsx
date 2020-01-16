@@ -1,8 +1,5 @@
 import React from 'react';
-/*
-// Import Howler for audio (https://github.com/goldfire/howler.js)
-import { Howl } from 'howler';
-*/
+
 // Import samples and sequence, along with padArr as key
 import { bankA, track1, track2, track3, track4, track5, track6, track7, track8, chanVolumeUpdate } from './sampleBanks.js';
 import sequence from './sequence.js';
@@ -15,13 +12,11 @@ import { faPause } from "@fortawesome/free-solid-svg-icons";
 import { faStepBackward } from "@fortawesome/free-solid-svg-icons";
 import { faStop } from "@fortawesome/free-solid-svg-icons";
 
-// Import Howler for audio (https://github.com/goldfire/howler.js)
-//import { Howl } from 'howler';
-
 // CSS
 import '../styles/volumeControl.css';
 import '../styles/sequencerLights.css';
 import '../styles/master.css';
+
 
 class Master extends React.Component {
     constructor(props) {
@@ -71,7 +66,6 @@ class Master extends React.Component {
     }
 
     sampleVolChange(e) {
-        //bankA[this.props.selectedPad].volume = e.currentTarget.value / 100;
         chanVolumeUpdate(this.props.selectedPad, e.currentTarget.value / 100);
         this.setState({
             // Refreshes DOM
@@ -132,7 +126,7 @@ class Master extends React.Component {
                     seqPad16: "redLight"
                 });
                 break;
-
+            
             default:
                 break;
         };
@@ -207,13 +201,13 @@ class Master extends React.Component {
         return(
             <div>
                 <div id="master">
-                    <div id="volumeSlider" className="slider">
+                    {/*<div id="volumeSlider" className="slider">
                         <input type="range" min="0" max="100" value={Math.round(this.state.volumeControl * 100)} onChange={this.volumeChange} id="volume-control"></input>
                         <div id="volumeDisplay" className="display">master vol: {Math.round(this.state.volumeControl * 100)}%</div>
-                    </div>
+        </div>*/}
                     <div id="sampleVolSlider" className="slider">
                         <input type="range" min="0" max="100" value={Math.round(bankA[this.props.selectedPad].volume * 100)} onChange={this.sampleVolChange} id="sampleVolControl"></input>
-                        <div id="chanVolDisplay" className="display">channel volume: {Math.round(bankA[this.props.selectedPad].volume * 100)}%</div>
+                        <div id="chanVolDisplay" className="display">volume: {Math.round(bankA[this.props.selectedPad].volume * 100)}%</div>
                     </div>
                     <div id="tempoSlider" className="slider">
                         <input type="range" min="60" max="240" value={Math.round(this.state.tempo * 100)} onChange={this.tempoChange} id="tempoContol"></input>
