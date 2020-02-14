@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     width: 90vw;
-    background-color: #808080;
+    background: linear-gradient(135deg, #808080, #8f8f8f);
     padding: 1vh 1vw;
     border-radius: 1vh;
 }
@@ -15,31 +15,31 @@
     height: 5vh;
     margin: 1vh 0.1vw;
     outline: none;
-    border: 0.2vh solid black;
+    border: 0.2vh solid #4d4c4c;
     border-radius: 0.7vh;
-    box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
+    box-shadow: 6px 4px 7px -1px #4b4b4b;
     flex: 1 1 2%;
     font-size: calc(0.5em + 0.5vw);
     font-weight: 600;
 }
 
 .seqPadA {
-    background-color: #cd311e;
+    background: linear-gradient(135deg, #cd311e, #e65340);
 }
 
 .seqPadB {
-    background-color: #e2792e;
+    background: linear-gradient(135deg, #e2792e, #ff9c55);
 }
 
 .seqPadC {
-    background-color: #e1dc49;
+    background: linear-gradient(135deg, #dbbe17, #f0d95c);
 }
 
 .seqPadD {
-    background-color: #f1f1f1;
+    background: linear-gradient(135deg, #ffffff, #ebebeb);
 }
 
 .seqPadActive {
-    background-color: #3ad31c;
+    background: linear-gradient(135deg, #3ad31c, #7ee969);
     box-shadow: none;
 }

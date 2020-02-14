@@ -12,7 +12,7 @@
 
 #pads {
     flex: 0 1 50%;
-    background-color: #808080;
+    background: linear-gradient(135deg, #808080, #8f8f8f);
     border: 0.2vw solid #cc4a22;
     border-radius: 1vh;
     height: 45vh;
@@ -26,16 +26,16 @@
 .drumPad {
     height: 8vh;
     margin: 0 0.5vw;
-    background-color: #e2e2e2;
+    background: linear-gradient(135deg, #ffffff, #ebebeb);
     outline: none;
-    border: 0.2vh solid black;
+    border: 0.2vh solid #4d4c4c;
     border-radius: 1vh;
-    box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
+    box-shadow: 6px 4px 7px -1px #4b4b4b;
     flex: 1 0 40%;
 }
 
 .drumPadActive {
-    background-color: #dbbe17;
+    background: linear-gradient(45deg, #ecd344, #ffd900);
     box-shadow: none;
 }
 

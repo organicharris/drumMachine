@@ -6,7 +6,7 @@
     margin: 0 1vw;
     border: 0.2vw solid #cc4a22;
     border-radius: 1vw;
-    background-color: #808080;
+    background: linear-gradient(135deg, #808080, #8f8f8f);
     height: 45vh;
     min-width: 45vw;
 }
@@ -18,8 +18,8 @@
 
 .display {
     width: 15vw;
-    background-color: #000000;
-    color: #0a8f2b  ;
+    background: linear-gradient(135deg, #000, #1b1b1b);
+    color: #0a8f2b;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     font-size: calc(0.3em + 0.5vw);
@@ -41,25 +41,26 @@
 .playControl {
     height: 5vh;
     outline: none;
-    border: 0.2vh solid black;
+    border: 0.2vh solid #4d4c4c;
+    box-shadow: 6px 4px 7px -1px #4b4b4b;
     border-radius: 0.7vh;
-    box-shadow: 0.2vw 0.2vh 0.2vw #3b04046b, -0.2vw -0.2vh 0.2vw #3b04046b;
     flex: 0 1 28%;
     font-size: calc(0.5em + 0.5vw);
     font-weight: 600;
+    background: linear-gradient(135deg, #ffffff, #ebebeb);
 }
 
 .stopButtonActive {
-    background-color: #cd311e;
+    background: linear-gradient(135deg, #cd311e, #e65340);
     box-shadow: none;
 }
 
 .playButtonActive {
-    background-color: #3ad31c;
+    background: linear-gradient(135deg, #3ad31c, #7ee969);
     box-shadow: none;
 }
 
 .pauseButtonActive, #returnToZeroButton:active {
-    background-color: #dbbe17;
+    background: linear-gradient(135deg, #dbbe17, #f0d95c);
     box-shadow: none;
 }

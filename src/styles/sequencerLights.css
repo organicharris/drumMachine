@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 90vw;
-    background-color: #808080;
+    background: linear-gradient(135deg, #808080, #8f8f8f);
     padding: 1vh 1vw;
     border-radius: 1vh;
 }
