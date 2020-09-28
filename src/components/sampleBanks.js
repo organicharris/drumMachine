@@ -3,14 +3,14 @@ import { Howl } from 'howler';
 
 // Sample banks - volume is for display and slider position only (volume is declared in howl variables below, and updated by chanVolumeUpdatefunction)
 const bankA = [
-    {sampleID: 'Kick', url: "https://staticserver.craigharrison.dev/drumMachineSamples/punchyKick.mp3", volume: 0.8}, 
-    {sampleID: 'Closed Hat', url: "https://staticserver.craigharrison.dev/drumMachineSamples/closedHat.mp3", volume: 0.6}, 
-    {sampleID: 'Open Hat', url: "https://staticserver.craigharrison.dev/drumMachineSamples/openHat.mp3", volume: 0.55}, 
-    {sampleID: 'Snare', url: "https://staticserver.craigharrison.dev/drumMachineSamples/snare.mp3", volume: 0.8},  
-    {sampleID: 'High Conga', url: "https://staticserver.craigharrison.dev/drumMachineSamples/highConga.mp3", volume: 0.5},  
-    {sampleID: "Low Conga", url: "https://staticserver.craigharrison.dev/drumMachineSamples/lowConga.mp3", volume: 0.5}, 
-    {sampleID: 'Shaker', url: "https://staticserver.craigharrison.dev/drumMachineSamples/shaker1.mp3", volume: 0.4},
-    {sampleID: 'Cowbell', url: "https://staticserver.craigharrison.dev/drumMachineSamples/cowbell.mp3", volume: 0.4}
+    {sampleID: 'Kick', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/punchyKick.mp3", volume: 0.8}, 
+    {sampleID: 'Closed Hat', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/closedHat.mp3", volume: 0.6}, 
+    {sampleID: 'Open Hat', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/openHat.mp3", volume: 0.55}, 
+    {sampleID: 'Snare', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/snare.mp3", volume: 0.8},  
+    {sampleID: 'High Conga', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/highConga.mp3", volume: 0.5},  
+    {sampleID: "Low Conga", url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/lowConga.mp3", volume: 0.5}, 
+    {sampleID: 'Shaker', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/shaker1.mp3", volume: 0.4},
+    {sampleID: 'Cowbell', url: "https://static-server-vhurettto.vercel.app/drumMachineSamples/cowbell.mp3", volume: 0.4}
 ];
 
 // Load in samples
